@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script defer src="counter.js"></script>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -29,28 +30,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 }
 </style>
 <meta name="robots" content="noindex">
-  <script>
-    var counterContainer = document.querySelector(".website-counter");
-var resetButton = document.querySelector("#reset");
-var visitCount = localStorage.getItem("page_view");
 
-// Check if page_view entry is present
-if (visitCount) {
-  visitCount = Number(visitCount) + 1;
-  localStorage.setItem("page_view", visitCount);
-} else {
-  visitCount = 1;
-  localStorage.setItem("page_view", 1);
-}
-counterContainer.innerHTML = visitCount;
-
-// Adding onClick event listener
-resetButton.addEventListener("click", () => {
-  visitCount = 1;
-  localStorage.setItem("page_view", 1);
-  counterContainer.innerHTML = visitCount;
-});
-  </script>
 </head>
 <body>
 
